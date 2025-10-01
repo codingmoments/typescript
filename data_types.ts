@@ -20,3 +20,7 @@ people = [ { name: 'Max', age: 32 }, { name: 'Manu', age: 29 } ];
 
 // Type inference
 let course = 'React - The Complete Guide';
+
+// Union type
+let courseUnion: string | number = 'React - The Complete Guide';
+courseUnion = 12341;
