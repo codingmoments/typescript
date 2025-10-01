@@ -18,3 +18,5 @@ person = { name: 'Max', age: 32 };
 let people: { name: string; age: number }[];
 people = [ { name: 'Max', age: 32 }, { name: 'Manu', age: 29 } ];
 
+// Type inference
+let course = 'React - The Complete Guide';
