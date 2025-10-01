@@ -27,15 +27,32 @@ courseUnion = 12341;
 
 // Type alias
 type Student = {
-    name: string,
-    class: string,
-    age: number
+  name: string,
+  class: string,
+  age: number
 }
 let student: Student;
 student = { name: 'Alice', class: '10th Grade', age: 15 };
 
 let students: Student[];
 students = [
-    { name: 'Bob', class: '10th Grade', age: 16 },
-    { name: 'Charlie', class: '11th Grade', age: 17 }
+  { name: 'Bob', class: '10th Grade', age: 16 },
+  { name: 'Charlie', class: '11th Grade', age: 17 }
 ];
+
+// Functions and types
+function add( a: number, b: number ) {
+  return a + b;
+}
+
+function multiply( a: number, b: number ): number {
+  return a * b;
+}
+
+function addOrConcat( a: number | string, b: number | string ): number | string {
+  if ( typeof a === 'number' && typeof b === 'number' ) {
+    return a + b;
+  } else {
+    return a.toString() + b.toString();
+  }
+}
