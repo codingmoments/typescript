@@ -24,3 +24,18 @@ let course = 'React - The Complete Guide';
 // Union type
 let courseUnion: string | number = 'React - The Complete Guide';
 courseUnion = 12341;
+
+// Type alias
+type Student = {
+    name: string,
+    class: string,
+    age: number
+}
+let student: Student;
+student = { name: 'Alice', class: '10th Grade', age: 15 };
+
+let students: Student[];
+students = [
+    { name: 'Bob', class: '10th Grade', age: 16 },
+    { name: 'Charlie', class: '11th Grade', age: 17 }
+];
