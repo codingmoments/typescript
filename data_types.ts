@@ -56,3 +56,15 @@ function addOrConcat( a: number | string, b: number | string ): number | string 
     return a.toString() + b.toString();
   }
 }
+
+// Generics
+function insertAtBeginning<T>( array: T[], value: T ) {
+  const newArray = [ value, ...array ];
+  return newArray;
+}
+
+const numberArray = [ 1, 2, 3 ];
+const updatedNumberArray = insertAtBeginning( numberArray, -1 ); // [-1, 1, 2, 3]
+
+const stringArray = [ 'b', 'c', 'd' ];
+const updatedStringArray = insertAtBeginning( stringArray, 'a' ); // ['a', 'b', 'c', 'd']
