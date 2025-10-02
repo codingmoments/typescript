@@ -68,3 +68,42 @@ const updatedNumberArray = insertAtBeginning( numberArray, -1 ); // [-1, 1, 2, 3
 
 const stringArray = [ 'b', 'c', 'd' ];
 const updatedStringArray = insertAtBeginning( stringArray, 'a' ); // ['a', 'b', 'c', 'd']
+
+// Classes and interfaces
+class Employee {
+  employeeId: number;
+  firstName: string;
+  lastName: string;
+  private salary: number;
+  dateOfJoining: Date;
+
+  constructor( employeeId: number, firstName: string, lastName: string, salary: number, dateOfJoining: Date ) {
+    this.employeeId = employeeId;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.salary = salary;
+    this.dateOfJoining = dateOfJoining;
+  }
+
+  updateSalary( newSalary: number ): void {
+    this.salary = newSalary;
+  }
+
+  getSalary(): number {
+    return this.salary;
+  }
+}
+
+const employee = new Employee( 1, 'John', 'Doe', 50000, new Date( '2020-01-15' ) );
+employee.updateSalary( 55000 );
+console.log( employee.getSalary() );
+
+class Manager {
+  constructor( public employeeId: number, public name: string, private salary: number ) { }
+
+  updateSalary( newSalary: number ): void {
+    this.salary = newSalary;
+  }
+}
+
+const manager = new Manager( 2, 'Jane Smith', 60000 );
