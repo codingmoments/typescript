@@ -107,3 +107,28 @@ class Manager {
 }
 
 const manager = new Manager( 2, 'Jane Smith', 60000 );
+
+// Interfaces
+interface Car {
+  make: string;
+  model: string;
+  year: number;
+  getDetails: () => string;
+}
+
+let myCar: Car = {
+  make: 'Toyota',
+  model: 'Camry',
+  year: 2020,
+  getDetails() {
+    return `${ this.year } ${ this.make } ${ this.model }`;
+  }
+};
+
+class SportsCar implements Car {
+  constructor( public make: string, public model: string, public year: number, public topSpeed: number ) { }
+
+  getDetails() {
+    return `${ this.year } ${ this.make } ${ this.model } with a top speed of ${ this.topSpeed } mph`;
+  }
+}
